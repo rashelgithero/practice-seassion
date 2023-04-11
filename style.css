@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 7, 7);
+    width: 300px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.box h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    z-index: 10;
+    font-size: 30px;
+    text-align: center;
+    
+}
+span{
+    color: aquamarine;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 35px;
+    
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 140%;
+    background: linear-gradient(0deg, rgb(236, 17, 236), cyan);
+    animation: name 3s linear  infinite ;
+
+
+}
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: linear-gradient(45deg, rgb(45, 44, 44), rgb(38, 38, 248));
+    border-radius: 10px;
+    
+}
+@keyframes name {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
